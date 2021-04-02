@@ -7,6 +7,7 @@
 </script>
 
 <style>
+
   ul {
     list-style: none;
     margin: 1rem;
@@ -28,6 +29,7 @@
 {#if items.length === 0}
   <p>No items in cart yet.</p>
 {:else}
+
   <ul>
     {#each items as item}
       <li>{item.title} - {item.price} euro</li>

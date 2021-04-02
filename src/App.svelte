@@ -9,6 +9,7 @@
 
   let products = [];
   let cartItems = [];
+  let bgImage='../images/background.jpg';
 
   function setTitle(event) {
     title = event.target.value;
@@ -39,17 +40,28 @@
 </script>
 
 <style>
+/* .background { 
+   background-image: url('public/images/background.jpg');
+} */
+  .background {
+    height:auto;
+    display:flex;
+    align-items:center;
+    background-size: cover;
+    background:no-repeat center center fixed;
+  }
   .container {
     width: 100%;
     background-color: rgb(67, 125, 151);
     padding: 10px;
     display: block;
-    margin: 0 auto;
-    border-radius: 5px;
+    margin: 30px auto;
+    border-radius: 10px;
+   
   }
   @media (min-width: 768px) {
     .container {
-      width: 35rem;
+      width: 25rem;
     }
   }
 
@@ -102,11 +114,15 @@
   }
 </style>
 
+
 <section>
   <Cart items={cartItems} />
+  <!-- <img src="./public/images/bacground.jpg" alt=""/> -->
 </section>
 
 <hr />
+
+<div class="background" style="background-image:url('{bgImage}')">
 <div class="container">
   <section class="section">
 
@@ -140,4 +156,5 @@
       {/each}
     {/if}
   </section>
+</div>
 </div>
